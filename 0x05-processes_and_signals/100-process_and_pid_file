@@ -8,26 +8,33 @@
 #Deletes the file /var/run/myscript.pid and terminates
 #itself when receiving a SIGQUIT or SIGTERM signal
 
-touch /var/run/myscript.pid
-pgrep -f 100-process_and_pid_file > /var/run/myscript.pid
+file="/var/run/myscript.pid"
+
+if [ ! -e $file ]
+then
+	touch $file
+fi
+
+pgrep -f 100-process_and_pid_file > $file
 
 function sigquit()
 {
-	rm /var/run/myscript.pid
+	rm $file
 	exit 0
 }
 
 function sigterm()
 {
 	echo "I hate the kill command"
-	rm /var/run/myscript.pid
+	rm $file
 	exit 0
 }
 
+trap "sigquit" SIGQUIT
+trap "sigterm" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+
 while true
 do
-	trap "sigquit" SIGQUIT
-	trap "sigterm" SIGTERM
-	trap "echo Y U no love me?!" SIGINT
 	echo "To infinity and beyond"
 done
