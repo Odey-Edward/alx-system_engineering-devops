@@ -9,13 +9,18 @@ hour=0
 
 while [ $hour -lt 12 ]
 do
-	echo Hour: $hour
 	minute=1
+	echo Hour: $hour
 	while [ $minute -le 59 ]
 	do
 		echo $minute
 		((minute += 1))
 	done
-	
+
 	((hour += 1))
+	if [ "$hour" -eq 12 ]
+	then
+		echo Hour: $hour
+	fi
+
 done
