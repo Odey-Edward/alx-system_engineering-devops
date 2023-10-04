@@ -12,11 +12,11 @@ What it is OSI Model
 How many layers it has  
 How it is organized
    
-**What is a LAN**
+**What is a LAN**    
 Typical usage  
 Typical geographical size
 
-**What is a WAN**
+**What is a WAN**    
 Typical usage  
 Typical geographical size  
 What is the Internet  
@@ -26,7 +26,7 @@ What is localhost
 What is a subnet  
 Why IPv6 was created  
 
-**TCP/UDP**
+**TCP/UDP**   
 What are the 2 mainly used data transfer protocols for IP (transfer level on the OSI schema)
 What is the main difference between TCP and UDP
 What is a port
