@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#a bash script that configures an Ubuntu server with the below requirements.
+
+#Requirements:
+#localhost resolves to 127.0.0.2
+#facebook.com resolves to 8.8.8.8.
+
+echo -e "127.0.0.2\tlocalhost" > "~/etc/hosts.new"
+echo -e "8.8.8.8\tfacebook.com" >> "~/etc/hosts.new"
+cp -f "~/etc/new_hosts" "/etc/hosts"
+rm "~/etc/new_hosts"
+
