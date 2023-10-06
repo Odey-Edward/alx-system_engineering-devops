@@ -5,6 +5,7 @@
 #localhost resolves to 127.0.0.2
 #facebook.com resolves to 8.8.8.8.
 
+cp /etc/hosts ~/new_hosts
 echo -e "127.0.0.2\tlocalhost" > ~/etc/new_hosts
 echo -e "8.8.8.8\tfacebook.com" >> ~/etc/new_hosts
 cp -f ~/etc/new_hosts /etc/hosts
