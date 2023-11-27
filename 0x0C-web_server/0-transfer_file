@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Bash script that transfers a file from our client to a server
 
 if [ "$#" != 4 ]
 then
