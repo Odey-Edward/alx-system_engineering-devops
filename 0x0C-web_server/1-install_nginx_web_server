@@ -10,7 +10,7 @@ sudo apt-get install nginx -y
 sudo ftw allow 'Nginx HTTP'
 
 #Creating new index
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 
 # Starting nginx
 sudo service start nginx
