@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Configures a new ubuntu machine by installing
+# Nginx where it should be listening on port 80
+# Serve a page that would return a Hello World string
+
+sudo apt-get update -y
+sudo apt-get nginx -y
+
+#allow traffic on port 80
+sudo ftw allow 'Nginx HTTP'
+
+#Creating new index
+echo 'Hello World!' > /var/www/html/index.nginx-debain.html
+
+# Starting nginx
+sudo service start nginx
