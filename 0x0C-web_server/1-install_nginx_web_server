@@ -13,4 +13,4 @@ sudo ufw allow 'Nginx HTTP'
 sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 
 # Starting nginx
-sudo service start nginx
+sudo service nginx start
