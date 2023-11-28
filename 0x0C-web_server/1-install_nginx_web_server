@@ -4,7 +4,7 @@
 # Serve a page that would return a Hello World string
 
 sudo apt-get update -y
-sudo apt-get nginx -y
+sudo apt-get install nginx -y
 
 #allow traffic on port 80
 sudo ftw allow 'Nginx HTTP'
