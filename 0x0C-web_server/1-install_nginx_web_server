@@ -7,7 +7,7 @@ sudo apt-get update -y
 sudo apt-get install nginx -y
 
 #allow traffic on port 80
-sudo ftw allow 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTP'
 
 #Creating new index
 sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
