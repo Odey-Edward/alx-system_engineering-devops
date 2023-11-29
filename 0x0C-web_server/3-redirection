@@ -10,10 +10,10 @@ sudo apt-get install nginx -y
 sudo ufw allow 'Nginx HTTP'
 
 #overite the default html page content
-echo 'Hello World!' | sudo tee /var/www/html/index.html
+echo 'Hello World!' | sudo tee /var/www/html/index
 
 #redirection configuration
-sed -i '/listen 80 default_server/a rewrite ^/redirect-me https://www.youtube.com/ permanent;' /etc/nginx/sites-available/default
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect-me https://www.youtube.com/ permanent;' /etc/nginx/sites-available/default
 
 # Starting nginx
-sudo service nginx start
+sudo service nginx restart
