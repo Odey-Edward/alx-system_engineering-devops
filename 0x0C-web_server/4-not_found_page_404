@@ -8,7 +8,7 @@ sudo mv index.html /var/www/html
 
 echo "Ceci n'est pas une page" > 404.html
 sudo mv 404.html /var/www/html
-sudo echo "server {
+echo "server {
    listen 80 default_server;
    listen [::]:80 default_server;
 
