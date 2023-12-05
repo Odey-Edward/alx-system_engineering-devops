@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Install and configure HAproxy 
 
 # Update package lists
 sudo apt-get update
