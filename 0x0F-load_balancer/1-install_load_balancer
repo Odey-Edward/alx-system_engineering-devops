@@ -23,7 +23,7 @@ backend web_backend
 EOT
 
 # Restart HAProxy to apply changes
-sudo systemctl restart haproxy
+sudo service haproxy restart
 
 # Enable HAProxy to be managed via init script
-sudo systemctl enable haproxy
+sudo service haproxy enable
