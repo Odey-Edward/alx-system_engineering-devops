@@ -5,6 +5,8 @@
 sudo apt-get update
 
 # Install HAProxy
+sudo apt-get -y install --no-install-recommends software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.4
 sudo apt-get install -y haproxy
 
 
@@ -25,4 +27,3 @@ sudo systemctl restart haproxy
 
 # Enable HAProxy to be managed via init script
 sudo systemctl enable haproxy
-
