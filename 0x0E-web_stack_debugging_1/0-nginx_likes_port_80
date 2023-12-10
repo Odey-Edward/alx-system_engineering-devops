@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #configure nginx web server to listen on post 80
 
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-available/default
+sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
 sudo service nginx restart
