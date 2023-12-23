@@ -13,4 +13,4 @@ sudo sed -i 's/:80\s/:8080 /' /etc/nginx/sites-available/default
 sudo sed -i 's/listen 80 d/listen 8080 d/' /etc/nginx/sites-available/default
 
 
-sudo service nginx restart
+sudo -u nginx service nginx start
