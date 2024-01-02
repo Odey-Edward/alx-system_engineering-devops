@@ -3,8 +3,8 @@
 a Python script that, uses a REST API, for a given employee ID,
 export information about his/her TODO list progress to an
 csv file"""
-import requests
 import csv
+import requests
 from sys import argv
 
 
