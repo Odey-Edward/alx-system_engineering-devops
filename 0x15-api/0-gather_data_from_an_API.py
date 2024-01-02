@@ -29,7 +29,7 @@ if __name__ == '__main__':
             doneTask.append(todo.get("title"))
             numDoneTask += 1
 
-    print('Employee {} is done with tasks({}/{})'
+    print('Employee {} is done with tasks({}/{}):'
           .format(user.get("name"), numDoneTask, totalTask))
     for task in doneTask:
         print('\t{}'.format(task))
