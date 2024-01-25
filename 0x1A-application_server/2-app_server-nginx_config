@@ -1,0 +1,14 @@
+# configure Nginx to serve page from the route /airbnb-onepage/
+# Nginx should proxy requests to the process listening on port 5000
+
+server {
+        listen  80;
+        listen [::]:80 default_server;
+
+        add_header X-Served-By 291655-web-01;
+
+        location /airbnb-onepage/ {
+                proxy_pass http://localhost:5000/airbnb-onepage/;
+        }
+
+}
